@@ -9,6 +9,17 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>W", ":wa<CR>")
 
+-- quit
+vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<leader>z", ":wq<CR>")
+
+
+
+
+
+
+---------
+
 -- cursor stays 
 vim.keymap.set("n", "J", "mzJ`z")
 
