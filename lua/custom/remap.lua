@@ -13,7 +13,12 @@ vim.keymap.set("n", "<leader>W", ":wa<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 vim.keymap.set("n", "<leader>z", ":wq<CR>")
 
+-- splitting
+vim.keymap.set("n", "<leader>-", ":sp<CR>")
+vim.keymap.set("n", "<leader>|", ":vsp<CR>")
 
+-- open terminal
+vim.keymap.set("n", "<leader>tt", ":botright split | terminal<CR>")
 
 ---------
 
@@ -42,4 +47,17 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
+end)
+
+vim.keymap.set("n", "<F5>", function()
+  local ft = vim.bo.filetype
+  if ft == "python" then
+    vim.cmd("w | :term python3 %")
+  elseif ft == "c" then
+    vim.cmd("w | :term gcc % -o %:r && ./%:r")
+  elseif ft == "cpp" then
+    vim.cmd("w | :term g++ % -o %:r && ./%:r")
+  elseif ft == "java" then
+    vim.cmd("w | :term javac % && java %:r")
+  end
 end)
