@@ -16,3 +16,9 @@ require("noice").setup({
     lsp_doc_border = false, -- add a border to hover docs and signature help
   },
 })
+
+vim.keymap.set("n", "<leader>nl", function()
+  require("noice").cmd("last")
+end)
+
+vim.keymap.set("n", "<leader>nh","<cmd>Noice telescope<CR>", { desc = "noice telescope"})
