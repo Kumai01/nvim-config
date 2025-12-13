@@ -19,6 +19,6 @@ require("noice").setup({
 
 vim.keymap.set("n", "<leader>nl", function()
   require("noice").cmd("last")
-end)
+end, { desc = "noice last message"})
 
 vim.keymap.set("n", "<leader>nh","<cmd>Noice telescope<CR>", { desc = "noice telescope"})
