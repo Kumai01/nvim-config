@@ -21,7 +21,13 @@ vim.keymap.set("n", "<leader>-", ":sp<CR>")
 vim.keymap.set("n", "<leader>|", ":vsp<CR>")
 
 -- open terminal
-vim.keymap.set("n", "<leader>tt", ":botright split | terminal<CR>")
+vim.keymap.set("n", "<leader>tn", ":botright split | terminal<CR>")
+vim.keymap.set("n", "<leader>tt", ":tabnew | terminal<CR>")
+
+-- navigate tabs
+vim.keymap.set("n", "<leader>tl", ":tabnext<CR>")
+vim.keymap.set("n", "<leader>th", ":tabprev<CR>")
+vim.keymap.set("n", "<leader>tc", ":tabclose<CR>")
 
 ---------
 
