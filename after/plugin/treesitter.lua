@@ -4,7 +4,7 @@ require'nvim-treesitter'.setup{
 }
 
 -- languages
-require'nvim-treesitter'.install { 'python', 'fsharp', 'java', 'cpp' }
+require'nvim-treesitter'.install { 'python', 'fsharp', 'java', 'cpp', 'lua' }
 
 -- filetypes
 vim.api.nvim_create_autocmd('FileType', {
@@ -13,8 +13,8 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- folds
--- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
--- vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.wo.foldmethod = 'expr'
 
 -- indentation
 vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
