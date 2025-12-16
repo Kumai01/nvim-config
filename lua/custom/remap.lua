@@ -14,7 +14,7 @@ vim.keymap.set("n", "<leader>W", ":wa<CR>")
 
 -- quit
 vim.keymap.set("n", "<leader>q", ":q<CR>")
-vim.keymap.set("n", "<leader>z", ":wq<CR>")
+vim.keymap.set("n", "<leader>Q", ":wq<CR>")
 
 -- splitting
 vim.keymap.set("n", "<leader>-", ":sp<CR>")
@@ -28,6 +28,11 @@ vim.keymap.set("n", "<leader>tt", ":tabnew | terminal<CR>")
 vim.keymap.set("n", "<leader>tl", ":tabnext<CR>")
 vim.keymap.set("n", "<leader>th", ":tabprev<CR>")
 vim.keymap.set("n", "<leader>tc", ":tabclose<CR>")
+
+-- java 
+vim.keymap.set("n", "<leader>cm", ":split | terminal mvn compile<CR>", { desc = "compile maven" } )
+vim.keymap.set("n", "<leader>cs", ":split | terminal mvn exec:java -Dexec.mainClass='server.ServerManager'<CR>", { desc = "run Server" } )
+vim.keymap.set("n", "<leader>cc", ":split | terminal mvn exec:java -Dexec.mainClass='client.Client' -Dexec.args='-l'<CR>", { desc = "run Client" } )
 
 ---------
 
