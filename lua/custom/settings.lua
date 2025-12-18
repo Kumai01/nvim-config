@@ -46,3 +46,13 @@ vim.opt.updatetime = 50
 
 -- Ex will default to tree view
 vim.g.netrw_liststyle = 3
+
+
+-- folds
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.wo.foldmethod = 'expr'
+vim.wo.foldlevel = 99  -- open all folds by default
+
+-- indentation
+vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
