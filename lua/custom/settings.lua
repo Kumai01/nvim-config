@@ -3,7 +3,7 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.api.nvim_create_autocmd("InsertEnter", { command = [[set norelativenumber]] })
-vim.api.nvim_create_autocmd("InsertLeave", { command = [[set relativenumber]] }) 
+vim.api.nvim_create_autocmd("InsertLeave", { command = [[set relativenumber]] })
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -46,3 +46,13 @@ vim.opt.updatetime = 50
 
 -- Ex will default to tree view
 vim.g.netrw_liststyle = 3
+
+
+-- folds
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.wo.foldmethod = 'expr'
+vim.wo.foldlevel = 99  -- open all folds by default
+
+-- indentation
+vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
