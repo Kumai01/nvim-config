@@ -7,5 +7,5 @@ function ColorMyPencils(color)
     vim.api.nvim_set_hl(0, "Visual", { bg = "#5c6370", fg = "#ffffff", bold = true })
 end
 
-ColorMyPencils()
+-- ColorMyPencils()
 
