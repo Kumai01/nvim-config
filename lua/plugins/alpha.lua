@@ -6,7 +6,7 @@ return {
     local dashboard = require("alpha.themes.dashboard")
 
     -- Set Directory
-    vim.cmd("cd ~/Desktop")
+    -- vim.cmd("cd ~/Desktop")
 
     -- Set header
     dashboard.section.header.val = {
